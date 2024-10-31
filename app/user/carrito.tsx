@@ -1,6 +1,7 @@
 import { useAuthContext } from "@/context/AuthContext";
 import useCart from "@/hooks/useCart";
 import { createOrder } from "@/services/orderService";
+import { CartItem } from "@/types/cart.interface";
 import { Order } from "@/types/order.interface";
 import React, { useState } from "react";
 import {
@@ -13,27 +14,6 @@ import {
   SafeAreaView,
   ActivityIndicator,
 } from "react-native";
-
-interface Store {
-  id: string;
-  name: string;
-}
-
-interface Product {
-  id: string;
-  name: string;
-  price: number;
-  description: string;
-  image: string;
-  stock: number;
-  category: string;
-  store: Store;
-}
-
-interface CartItem {
-  product: Product;
-  quantity: number;
-}
 
 const ShoppingCart = () => {
   const { user } = useAuthContext();
@@ -93,6 +73,7 @@ const ShoppingCart = () => {
       id: Math.random().toString(36).substring(7),
       state: "P",
       user,
+      creationDate: new Date(),
     };
     try {
       await createOrder(orderItem);

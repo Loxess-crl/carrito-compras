@@ -39,3 +39,18 @@ export const updateOrderStatus = async (
   );
   await set(orderRef, newState);
 };
+
+export const fetchAllOrders = (callback: (orders: Order[]) => void) => {
+  const ordersRef = ref(database, API_ROUTES.ORDERS);
+  onValue(ordersRef, (snapshot) => {
+    const ordersData: Order = snapshot.val();
+    if (ordersData) {
+      const orders: Order[] = Object.values(ordersData).flatMap(
+        (userOrders: Record<string, Order>) => Object.values(userOrders)
+      );
+      callback(orders);
+    } else {
+      callback([]);
+    }
+  });
+};

@@ -5,7 +5,8 @@
       "name": "Juan User",
       "email": "user@example.com",
       "password": "password123",
-      "role": "user"
+      "role": "user",
+      "phone": "933170315"
     },
     {
       "id": 2,
@@ -36,7 +37,7 @@
         "name": "TechStore",
         "address": "Calle Principal #123",
         "contactEmail": "contact@techstore.com",
-        "phone": "555-0123",
+        "phone": "933170315",
         "logo": "https://via.placeholder.com/50",
         "rating": 4.8
       }
@@ -54,7 +55,7 @@
         "name": "iShop",
         "address": "Plaza Central #456",
         "contactEmail": "ventas@ishop.com",
-        "phone": "555-0456",
+        "phone": "933170315",
         "logo": "https://via.placeholder.com/50",
         "rating": 4.5
       }
@@ -72,7 +73,7 @@
         "name": "Apple Store",
         "address": "Avenida Principal #789",
         "contactEmail": "ventas@ishop.com",
-        "phone": "555-0789",
+        "phone": "933170315",
         "logo": "https://via.placeholder.com/50",
         "rating": 4.9
       }

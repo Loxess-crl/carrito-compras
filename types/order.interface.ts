@@ -1,5 +1,4 @@
 import { CartItem } from "./cart.interface";
-import { Product } from "./product.interface";
 import { User } from "./user.interface";
 
 export interface Order {
@@ -8,6 +7,7 @@ export interface Order {
   cart: CartItem[];
   total: number;
   state: OrderState;
+  creationDate: Date;
 }
 /* Pendiente, Confirmado, En camino, Entregado */
 export type OrderState = "P" | "C" | "E" | "Eo";

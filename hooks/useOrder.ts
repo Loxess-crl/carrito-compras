@@ -1,6 +1,6 @@
 // hooks/useOrders.ts
 import { useEffect, useState } from "react";
-import { fetchOrdersForUser } from "../services/orderService";
+import { fetchAllOrders, fetchOrdersForUser } from "../services/orderService";
 import { Order } from "@/types/order.interface";
 import { useAuthContext } from "@/context/AuthContext";
 
@@ -21,6 +21,24 @@ const useOrders = () => {
       };
     }
   }, [user]);
+
+  return orders;
+};
+
+export const useAllOrders = () => {
+  const [orders, setOrders] = useState<Order[]>([]);
+
+  useEffect(() => {
+    const fetchOrders = () => {
+      fetchAllOrders(setOrders);
+    };
+
+    fetchOrders();
+
+    return () => {
+      setOrders([]);
+    };
+  }, []);
 
   return orders;
 };

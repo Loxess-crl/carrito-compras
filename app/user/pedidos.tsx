@@ -1,5 +1,6 @@
 import useOrders from "@/hooks/useOrder";
 import { Order, OrderState } from "@/types/order.interface";
+import { getOrderStateInfo } from "@/utils/orderUtils";
 import React from "react";
 import {
   View,
@@ -10,16 +11,6 @@ import {
   TouchableOpacity,
   ActivityIndicator,
 } from "react-native";
-
-const getOrderStateInfo = (state: OrderState) => {
-  const states = {
-    P: { label: "Pendiente", color: "#FFA500", bgColor: "#FFF3E0" },
-    C: { label: "Confirmado", color: "#2196F3", bgColor: "#E3F2FD" },
-    E: { label: "En camino", color: "#9C27B0", bgColor: "#F3E5F5" },
-    Eo: { label: "Entregado", color: "#4CAF50", bgColor: "#E8F5E9" },
-  };
-  return states[state];
-};
 
 const OrderStatusBadge = ({ state }: { state: OrderState }) => {
   const stateInfo = getOrderStateInfo(state);

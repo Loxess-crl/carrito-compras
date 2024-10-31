@@ -1,4 +1,3 @@
-// services/orderService.ts
 import { API_ROUTES } from "@/constants/api_routes.enum";
 import { database } from "@/firebase/client";
 import { Order, OrderState } from "@/types/order.interface";

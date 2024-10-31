@@ -58,7 +58,6 @@ const OrderCard = ({ order }: { order: Order }) => {
 };
 
 const PedidosScreen = () => {
-  // Asumimos que estos estados vendrían de un hook
   const [loading, setLoading] = React.useState(false);
   const orders = useOrders();
 

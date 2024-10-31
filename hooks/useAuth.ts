@@ -1,14 +1,7 @@
 import { useState } from "react";
 import { useAuthContext } from "../context/AuthContext";
 import { API_URL } from "@/constants/constants";
-
-interface User {
-  id: number;
-  name: string;
-  email: string;
-  password: string;
-  role: string;
-}
+import { User } from "@/types/user.interface";
 
 const useAuth = () => {
   const [loading, setLoading] = useState(false);

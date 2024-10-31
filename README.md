@@ -1,50 +1,56 @@
-# Welcome to your Expo app 👋
+# Prueba Técnica - Aplicación Móvil
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Este proyecto es una prueba técnica que utiliza Expo y json-server para proporcionar una aplicación móvil funcional.
 
-## Get started
+## Requisitos
 
-1. Install dependencies
+- Node.js instalado en tu máquina.
+- Expo CLI: Si aún no lo tienes instalado, puedes hacerlo con el siguiente comando:
+  ```bash
+  npm install -g expo-cli
+  ```
 
-   ```bash
-   npm install
-   ```
+## Clonación del Proyecto
 
-2. Start the app
-
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+Para empezar, clona el repositorio en tu máquina local:
 
 ```bash
-npm run reset-project
+git clone https://github.com/Loxess-crl/carrito-compras.git
+cd carrito-compras
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Instalación de Dependencias
 
-## Learn more
+Ejecuta el siguiente comando para instalar las dependencias necesarias:
 
-To learn more about developing your project with Expo, look at the following resources:
+```bash
+npm install
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Configuración de la API
 
-## Join the community
+El archivo `constants.ts` contiene la configuración de la API URL. Asegúrate de que la variable `API_URL` coincida con la dirección donde estás ejecutando json-server. La configuración de json-server debe ejecutarse de la siguiente manera:
 
-Join our community of developers creating universal apps.
+```bash
+json-server --watch db.json --port 3000 --host [API_URL]
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Esto es importante si deseas acceder a la API desde otro dispositivo conectado a la misma red.
+
+## Usuarios para Iniciar Sesión
+
+Los usuarios para el inicio de sesión están definidos en el archivo `db.json`. Puedes revisar y modificar este archivo según sea necesario.
+
+## Ejecución de la Aplicación
+
+Para correr la aplicación en un dispositivo Android, ejecuta el siguiente comando:
+
+```bash
+npx expo run:android
+```
+
+Asegúrate de tener tu dispositivo Android conectado a tu máquina o de estar utilizando un emulador de Android.
+
+## Conclusión
+
+Gracias por revisar esta prueba técnica. Si tienes alguna pregunta o necesitas más información, no dudes en contactarme.

@@ -1,5 +1,3 @@
-// src/hooks/useCart.ts
-
 import { useEffect, useState } from "react";
 import {
   addToCart,

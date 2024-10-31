@@ -1,4 +1,3 @@
-// hooks/useOrders.ts
 import { useEffect, useState } from "react";
 import { fetchAllOrders, fetchOrdersForUser } from "../services/orderService";
 import { Order } from "@/types/order.interface";

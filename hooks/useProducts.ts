@@ -1,5 +1,3 @@
-// src/hooks/useProducts.ts
-
 import { useEffect, useState } from "react";
 import { fetchProductById, fetchProducts } from "../services/apiService";
 import { Product } from "@/types/product.interface";

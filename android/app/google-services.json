@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "501831644993",
+    "firebase_url": "https://carrito-compras-8249f-default-rtdb.firebaseio.com",
+    "project_id": "carrito-compras-8249f",
+    "storage_bucket": "carrito-compras-8249f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501831644993:android:57c6c76b549025d57593c0",
+        "android_client_info": {
+          "package_name": "com.loxess.carritocompras"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0KHcA4QGB-JrjvOjcpcWc2-dmElznHTg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

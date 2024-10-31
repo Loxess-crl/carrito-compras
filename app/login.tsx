@@ -20,16 +20,15 @@ const LoginScreen = () => {
   const handleLogin = async () => {
     const user = await authenticateUser(email, password);
     if (user) {
-      // Redirigir según el rol
       switch (user.role) {
         case "user":
-          router.push("/user");
+          router.navigate("/user");
           break;
         case "business":
-          router.push("/business");
+          router.navigate("/business");
           break;
         case "delivery":
-          router.push("/delivery");
+          router.navigate("/delivery");
           break;
         default:
           Alert.alert("Error", "Rol desconocido");
@@ -57,7 +56,11 @@ const LoginScreen = () => {
         secureTextEntry
         autoCapitalize="none"
       />
-      <Button title="Iniciar Sesión" onPress={handleLogin} />
+      {loading ? (
+        <ActivityIndicator size="large" color="#0000ff" />
+      ) : (
+        <Button title="Iniciar Sesión" onPress={handleLogin} />
+      )}
     </View>
   );
 };
@@ -69,7 +72,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     padding: 16,
-    backgroundColor: "#f5f5f5", // Fondo claro
+    backgroundColor: "#f5f5f5",
   },
   title: {
     fontSize: 24,

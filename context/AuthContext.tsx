@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 interface User {
-  id: number;
+  id: string;
   email: string;
   role: string;
 }
@@ -13,10 +13,8 @@ interface AuthContextType {
   logout: () => void;
 }
 
-// Crear el contexto
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-// Proveedor del contexto
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
@@ -50,11 +48,12 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
   );
 };
 
-// Hook para usar el contexto
 export const useAuthContext = () => {
   const context = useContext(AuthContext);
   if (!context) {
-    throw new Error("useAuthContext must be used within an AuthProvider");
+    throw new Error(
+      "useAuthContext debe estar dentro del proveedor AuthProvider"
+    );
   }
   return context;
 };

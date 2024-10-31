@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { useAuthContext } from "../context/AuthContext";
-import { URL_API } from "@/constants/constants";
+import { API_URL } from "@/constants/constants";
 
 interface User {
   id: number;
+  name: string;
   email: string;
   password: string;
   role: string;
@@ -18,7 +19,7 @@ const useAuth = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`${URL_API}/users`);
+      const response = await fetch(`${API_URL}/users`);
       const users: User[] = await response.json();
 
       const user = users.find(
@@ -29,8 +30,8 @@ const useAuth = () => {
         throw new Error("Credenciales incorrectas");
       }
 
-      login(user); // Guardar el usuario en el contexto
-      return user; // Retorna el usuario para redirigir según el rol
+      login(user);
+      return user;
     } catch (error) {
       setError((error as Error).message);
     } finally {

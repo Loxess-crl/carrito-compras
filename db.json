@@ -2,21 +2,81 @@
   "users": [
     {
       "id": 1,
+      "name": "Juan User",
       "email": "user@example.com",
       "password": "password123",
       "role": "user"
     },
     {
       "id": 2,
+      "name": "Pedro Business",
       "email": "business@example.com",
       "password": "password123",
       "role": "business"
     },
     {
       "id": 3,
+      "name": "Pablo Delivery",
       "email": "delivery@example.com",
       "password": "password123",
       "role": "delivery"
     }
-  ]
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "MacBook Pro M3",
+      "price": 1299.99,
+      "description": "Laptop Apple con chip M3",
+      "image": "https://cataas.com/cat?width=150&height=150",
+      "stock": 5,
+      "category": "Electrónicos",
+      "store": {
+        "id": 1,
+        "name": "TechStore",
+        "address": "Calle Principal #123",
+        "contactEmail": "contact@techstore.com",
+        "phone": "555-0123",
+        "logo": "https://via.placeholder.com/50",
+        "rating": 4.8
+      }
+    },
+    {
+      "id": 2,
+      "name": "iPad Air",
+      "price": 599.99,
+      "description": "iPad Air última generación",
+      "image": "https://cataas.com/cat?width=150&height=150",
+      "stock": 0,
+      "category": "Electrónicos",
+      "store": {
+        "id": 2,
+        "name": "iShop",
+        "address": "Plaza Central #456",
+        "contactEmail": "ventas@ishop.com",
+        "phone": "555-0456",
+        "logo": "https://via.placeholder.com/50",
+        "rating": 4.5
+      }
+    },
+    {
+      "id": 3,
+      "name": "iPhone 12",
+      "price": 999.99,
+      "description": "iPhone 12 con 128GB",
+      "image": "https://cataas.com/cat?width=150&height=150",
+      "stock": 3,
+      "category": "Electrónicos",
+      "store": {
+        "id": 3,
+        "name": "Apple Store",
+        "address": "Avenida Principal #789",
+        "contactEmail": "ventas@ishop.com",
+        "phone": "555-0789",
+        "logo": "https://via.placeholder.com/50",
+        "rating": 4.9
+      }
+    }
+  ],
+  "orders": []
 }

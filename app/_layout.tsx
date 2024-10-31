@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
-import { useRouter } from "expo-router";
+import { Slot, useRouter } from "expo-router";
 import { AuthProvider, useAuthContext } from "@/context/AuthContext";
-import { Slot } from "expo-router"; // Asegúrate de que este import esté correcto
 
 const Layout = () => {
   return (
@@ -35,7 +34,7 @@ const Main = () => {
     }
   }, [user]);
 
-  return <Slot />; // Esto renderiza el contenido de la ruta actual
+  return <Slot />;
 };
 
 export default Layout;
